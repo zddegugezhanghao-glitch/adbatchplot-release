@@ -1,7 +1,7 @@
 {
   "version": "2.3.3.0",
   "releaseDate": "2026-10-13",
-  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.3/AD-BatchPlot-V2.3.3-AllVersions.zip",
+  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.3/AD-BatchPlot-v2.3.3-AllVersions.zip",
   "minSupportedVersion": "2.0.0.0",
   "notes": "1. 字段取值总开关完全手动：不开就完全不参与识别，零速度负担。\n2. 设置新增独立「关于」页签（版本/检查更新/命令一览）。\n3. 印章示意图版面可选（图框库任意图框/最近出图的实际图框）；一条印章可绑多张图片。\n4. 盖章页码支持阿拉伯数字与范围（1,3,5-8、第1-3页、全角数字）。\n5. 排序示意图重做：间距加大、箭头贴边，不再遮挡。"
 }
