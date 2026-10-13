@@ -1,0 +1,10 @@
+AD-批量打印 V2.3.5  主程序 md5 核对表
+========================================================
+
+AutoCAD 2007-2010 (旧版)\AcadBatchPlot2007.dll   e7520230d9b731ea8ffb157c516f94b0
+AutoCAD 2013-2019 (x86)\AcadBatchPlot.dll      db0f96fcede6dc083e3cb9ad09fa9cc2
+AutoCAD 2013-2024 (x64)\AcadBatchPlot.dll      b766d83d756fb14923fca8f4193a0fa3
+AutoCAD 2025-2027 (x64)\AcadBatchPlot2025.dll  9d59dfa20904fec6324ebb27206f99c3
+ZWCAD 2023 (x64)\BatchPlotter2023.dll          ac86d7ce047d352cc14a5f349cc3c98e
+ZWCAD 2024 (x64)\BatchPlotter2024.dll          ff92e50201df54a6b4a68c674b7b50ea
+ZWCAD 2025 (x64)\BatchPlotter2025.dll          8acbdbada86499d64c0d1fffddde853d

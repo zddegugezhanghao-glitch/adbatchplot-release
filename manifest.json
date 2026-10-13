@@ -1,7 +1,7 @@
 {
-  "version": "2.3.4.0",
+  "version": "2.3.5.0",
   "releaseDate": "2026-10-13",
-  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.4/AD-BatchPlot-V2.3.4-AllVersions.zip",
+  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.5/AD-BatchPlot-V2.3.5-AllVersions.zip",
   "minSupportedVersion": "2.0.0.0",
-  "notes": "1. 印章库排版修复：图片行不再重叠，位置与示意图版面分行。\n2. 学习示例模板下拉空态引导提示。\n3. 排序示意图：去掉箭头，连线加粗清晰，数字缩小。"
+  "notes": "1. 印章示意图支持「抓取当前 CAD 画面」：CAD 里缩放好图框后一键抓取真实画面，拖拽定位所见即所得。\n2. 修复「无法删除模板」：模板改独立文件存储，不再被设置保存覆盖。"
 }
