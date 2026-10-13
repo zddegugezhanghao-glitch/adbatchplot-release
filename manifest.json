@@ -1,7 +1,7 @@
 {
-  "version": "2.3.6.0",
+  "version": "2.3.7.0",
   "releaseDate": "2026-10-13",
-  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.6/AD-BatchPlot-V2.3.6-AllVersions.zip",
+  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.7/AD-BatchPlot-V2.3.7-AllVersions.zip",
   "minSupportedVersion": "2.0.0.0",
-  "notes": "1. 印章示意图精准抓取：选「已识别图框」后自动缩放到图框并截取绘图区。\n2. CAD 菜单新增「检测更新」；「关于」窗新增检测更新按钮。\n3. 移除打印预设「关于」页签。"
+  "notes": "1. 印章示意图精准抓取升级：本次识别到的每个图框都可选，自动缩放+截取绘图区。\n2. 关于窗检测更新按钮移位，不再遮挡文字。"
 }
