@@ -1,7 +1,7 @@
 {
-  "version": "2.3.1.0",
+  "version": "2.3.2.0",
   "releaseDate": "2026-10-13",
-  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.1/AD-BatchPlot-V2.3.1-AllVersions.zip",
+  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.2/AD-BatchPlot-v2.3.2-AllVersions.zip",
   "minSupportedVersion": "2.0.0.0",
-  "notes": "1. 修复打开签名印章库报错（对象未实例化）。\n2. 学习示例模板：示例可存成模板，换项目一键切换、可清除。\n3. 字段自动取值开关：配了取值自动启用，不再弹窗。\n（含 V2.3.0：单张打印比例、图框库位置预设、印章页码规则与图上定位。）"
+  "notes": "1. 在线更新只在点「检查更新」时检测；设置→常规新增「关于」与更新按钮。\n2. 印章库窗口可自由调整大小；定位示意图升级为图框预览（按图框库真实比例显示纸边/图框线/标题栏）。\n3. 排序示意图箭头只画格子间隙，更清晰。"
 }
