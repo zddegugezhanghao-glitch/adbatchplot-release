@@ -1,7 +1,7 @@
 {
   "version": "2.3.4.0",
   "releaseDate": "2026-10-13",
-  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.4/AD-BatchPlot-Vv2.3.4-AllVersions.zip",
+  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.4/AD-BatchPlot-V2.3.4-AllVersions.zip",
   "minSupportedVersion": "2.0.0.0",
   "notes": "1. 印章库排版修复：图片行不再重叠，位置与示意图版面分行。\n2. 学习示例模板下拉空态引导提示。\n3. 排序示意图：去掉箭头，连线加粗清晰，数字缩小。"
 }
