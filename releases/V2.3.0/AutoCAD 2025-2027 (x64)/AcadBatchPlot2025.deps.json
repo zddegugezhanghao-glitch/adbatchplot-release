@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "AcadBatchPlot2025/2.2.14.0": {
+      "AcadBatchPlot2025/2.3.0.0": {
         "dependencies": {
           "Docnet.Core": "2.6.0",
           "Newtonsoft.Json": "13.0.3",
@@ -248,7 +248,7 @@
     }
   },
   "libraries": {
-    "AcadBatchPlot2025/2.2.14.0": {
+    "AcadBatchPlot2025/2.3.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
