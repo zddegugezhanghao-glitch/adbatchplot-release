@@ -1,7 +1,7 @@
 {
-  "version": "2.3.9.0",
+  "version": "2.3.10.0",
   "releaseDate": "2026-10-14",
-  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.9/AD-BatchPlot-V2.3.9-AllVersions.zip",
+  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.10/AD-BatchPlot-V2.3.10-AllVersions.zip",
   "minSupportedVersion": "2.0.0.0",
-  "notes": "1. 印章定位「真实投影」：示意图用打印引擎输出选中图框，与最终打印一致。\n2. 印章红块按真实毫米尺寸比例显示（宽高与纸张同比例），所见即所得。"
+  "notes": "1. 修复印章库「投影识别图框」没反应：现在自动关窗→投影→重开显示投影图，失败也会说明原因。\n2. 签名印章库编辑区加竖向滚动条，内容不再被窗口裁掉。"
 }
