@@ -1,7 +1,7 @@
 {
-  "version": "2.3.11.0",
-  "releaseDate": "2026-10-14",
-  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.11/AD-BatchPlot-V2.3.11-AllVersions.zip",
+  "version": "2.3.12.0",
+  "releaseDate": "2026-10-15",
+  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.12/AD-BatchPlot-V2.3.12-AllVersions.zip",
   "minSupportedVersion": "2.0.0.0",
-  "notes": "1. 印章尺寸实时调：宽/内缩 X/Y 输入即实时预览，显示实际宽×高，可一键应用。\n2. 盖章页码加区间编辑器：起始/结束页一键追加，可叠加多段（1-5,3-8,odd…）。"
+  "notes": "1. 修复字段中心图号学习「删除模板」不生效（按引用删除静默失败，改按字段+名称匹配删除）。\n2. 修复 AutoCAD 2023 菜单栏不显示（首次文档激活时再装菜单，新增 ZBP_SHOW_MENU 手动重装命令）。\n3. 图签印章新增「按原图大小」：按图片 DPI 换算毫米回填印章宽，高度按图片比例自动得出。"
 }

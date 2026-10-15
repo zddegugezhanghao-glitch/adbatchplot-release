@@ -1,0 +1,15 @@
+AD-批量打印 V2.3.12  主程序 md5 核对表
+========================================================
+
+AutoCAD 2007-2010 (旧版)\AcadBatchPlot2007.dll   f809bed4c77f1529fb55bd905a02d4ca
+AutoCAD 2013-2019 (x86)\AcadBatchPlot.dll      f9b53e6119e0ba680bf49b74ce075c0e
+AutoCAD 2013-2024 (x64)\AcadBatchPlot.dll      b352787dd3ef6ad7bbbe0def469a5127
+AutoCAD 2025-2027 (x64)\AcadBatchPlot2025.dll  65c0e2fa9cfb3bdf84ae04b5b15ffd14
+GStarCAD 2023 (x64)\AcadBatchPlotGSTAR2023.dll ed7b60224816cf204884b64e29744281
+GStarCAD 2024 (x64)\AcadBatchPlotGSTAR2024.dll 5aa0ed0894ce27cf5633acf376762d4c
+GStarCAD 2025 (x64)\AcadBatchPlotGSTAR2025.dll 6d5e462a0d662dd083d57ca6025f2aed
+GStarCAD 2026 (x64)\AcadBatchPlotGSTAR2026.dll 86d908c69d4f5c3a288aeec43bbcf335
+GStarCAD 2027 (x64)\AcadBatchPlotGSTAR2027.dll 10326a3744213515969c3c580c13eb2e
+ZWCAD 2023 (x64)\BatchPlotter2023.dll          27abdc6d2d075507ab89481c3e9cba12
+ZWCAD 2024 (x64)\BatchPlotter2024.dll          8afe752eb420c85539f079d3216a588b
+ZWCAD 2025 (x64)\BatchPlotter2025.dll          6a940c2adb3577abde8633cc18dd1e39
