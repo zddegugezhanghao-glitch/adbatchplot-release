@@ -1,7 +1,7 @@
 {
-  "version": "2.3.13.0",
-  "releaseDate": "2026-10-15",
-  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.13/AD-BatchPlot-V2.3.13-AllVersions.zip",
+  "version": "2.3.14.0",
+  "releaseDate": "2026-10-19",
+  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.14/AD-BatchPlot-V2.3.14-AllVersions.zip",
   "minSupportedVersion": "2.0.0.0",
-  "notes": "1. 检查更新多源加速：raw + 三个 jsDelivr CDN 镜像（cdn/fastly/gcore）依次尝试，单源 8 秒超时，解决国内直连 raw 常年超时（约 100 秒干等）才报「没能连上版本仓库」的问题。\n2. 检查更新即时反馈：点击后立刻弹「正在检查更新…」小窗，完成后自动关闭并给出结论（已是最新 / 发现新版本 / 失败原因），不再毫无动静地干等。\n3. 含 V2.3.12 图号学习删除模板修复、AutoCAD 2023 菜单修复、图签印章「按原图大小」等功能。"
+  "notes": "1. 修复「新增图框」框选多个字段后录不进去：字段窗口每框选一次就会打断 CAD 模态循环，旧代码只重入一次，框到第 2 个字段后命令提前判「已取消」而窗口还在，随后点确定也无人接收 → 图框丢失。现反复重入模态，直到真正点确定/取消，连续框选多个字段也能正常入库。\n2. 含 V2.3.13 检查更新多源加速（raw + gh-proxy/ghproxy 代理 + jsDelivr）与即时弹窗。\n3. 字段中心（定义字段）与图框库（按图框存字段区域）相互独立；图框库在「图框识别」模式下生效。"
 }
