@@ -1,7 +1,7 @@
 {
-  "version": "2.3.14.0",
+  "version": "2.3.15.0",
   "releaseDate": "2026-10-19",
-  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.14/AD-BatchPlot-V2.3.14-AllVersions.zip",
+  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.15/AD-BatchPlot-V2.3.15-AllVersions.zip",
   "minSupportedVersion": "2.0.0.0",
-  "notes": "1. 修复「新增图框」框选多个字段后录不进去：字段窗口每框选一次就会打断 CAD 模态循环，旧代码只重入一次，框到第 2 个字段后命令提前判「已取消」而窗口还在，随后点确定也无人接收 → 图框丢失。现反复重入模态，直到真正点确定/取消，连续框选多个字段也能正常入库。\n2. 含 V2.3.13 检查更新多源加速（raw + gh-proxy/ghproxy 代理 + jsDelivr）与即时弹窗。\n3. 字段中心（定义字段）与图框库（按图框存字段区域）相互独立；图框库在「图框识别」模式下生效。"
+  "notes": "1. 安装器修复「内嵌版本包缺失」：dotnet 工程的内嵌资源名带命名空间前缀，代码按裸名取不到 → 加 LogicalName 并按后缀兜底，安装器可正常安装。\n2. 安装器修复版本号错位：年份改为从安装目录名（AutoCAD 2020）取，每个版本号显示正确（以前 2020 显示成 2019、2026 显示成 2025）。\n3. 新增兼容中望 ZWCAD 2026（官方暂无 2026 SDK，按 2025 API 代际编译，需实机验证）。\n4. 修复「新增图框」框选多个字段后录不进去。"
 }
