@@ -1,7 +1,7 @@
 {
-  "version": "2.3.15.0",
+  "version": "2.3.16.0",
   "releaseDate": "2026-10-19",
-  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.15/AD-BatchPlot-V2.3.15-AllVersions.zip",
+  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.16/AD-BatchPlot-V2.3.16-AllVersions.zip",
   "minSupportedVersion": "2.0.0.0",
-  "notes": "1. 安装器修复「内嵌版本包缺失」：dotnet 工程的内嵌资源名带命名空间前缀，代码按裸名取不到 → 加 LogicalName 并按后缀兜底，安装器可正常安装。\n2. 安装器修复版本号错位：年份改为从安装目录名（AutoCAD 2020）取，每个版本号显示正确（以前 2020 显示成 2019、2026 显示成 2025）。\n3. 新增兼容中望 ZWCAD 2026（官方暂无 2026 SDK，按 2025 API 代际编译，需实机验证）。\n4. 修复「新增图框」框选多个字段后录不进去。"
+  "notes": "1. 新增「真彩打印 / 索引色打印」：设置→打印预设→常规→颜色输出。索引色＝套 CTB 按 ACI 索引色；真彩＝不套样式表按对象真实颜色。\n2. 修复安装器装完菜单栏不显示：安装器现在自动写 CAD 自动加载注册表（HKCU\\<产品根>\\Applications\\AcadBatchPlot），重启即加载并显示菜单。\n3. 修复文件命名默认预设为英文：默认命名格式改为中文 {图号}_{图名}。"
 }
