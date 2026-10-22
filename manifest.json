@@ -1,7 +1,7 @@
 {
-  "version": "2.3.20.0",
+  "version": "2.3.21.0",
   "releaseDate": "2026-10-22",
-  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.20/AD-BatchPlot-V2.3.20-AllVersions.zip",
+  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.21/AD-BatchPlot-V2.3.21-AllVersions.zip",
   "minSupportedVersion": "2.0.0.0",
   "notes": "1. 追加图框「框选」改为与通用识别同一套选择提示；拿不到选择集时自动退回两点圈范围，按钮不会再\"点了没反应\"。\n2. 修复取消勾选「打印」后序号残留：取消即清空并同步重画；覆盖层擦除加了图层兜底，通用识别留下的旧序号也会清掉。\n3. 设置新增「恢复默认设置」（只重置设置项，图框库与图纸不动，点保存才生效）。\n4. 设置新增「运行日志」：默认关闭，可自选目录（留空＝%TEMP%\\ADBatchPlotRun），记录追加图框/识别/临时框刷新等关键动作。"
 }
