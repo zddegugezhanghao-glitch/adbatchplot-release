@@ -1,7 +1,7 @@
 {
-  "version": "2.3.17.0",
+  "version": "2.3.18.0",
   "releaseDate": "2026-10-22",
-  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.17/AD-BatchPlot-V2.3.17-AllVersions.zip",
+  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.18/AD-BatchPlot-V2.3.18-AllVersions.zip",
   "minSupportedVersion": "2.0.0.0",
-  "notes": "1. 首页按钮「手动添加」改名为「追加图框」（功能不变）。\n2. 修复中望 ZWCAD「录入新图框后卡死」：图框库窗口内不再嵌套 CAD 模态窗/取点，改为关窗交回命令上下文执行，跑完重开窗口。\n3. 图框信息库列表新增录入字段列（图号/图名/日期/版次/阶段/信息1-2/自定义字段）：录入过才建列，单元格显示录入时识别到的文字。"
+  "notes": "1. 图框库管理窗口：移除无用的「保存修改」（改不动任何东西），换成「编辑选中」；所有提示框/文件对话框改为带属主；重新获得焦点时不再重扫全图（\"点按钮就卡几秒\"的真凶）。\n2. 修复「追加图框」两点定位不生效：入口改为取点提示，直接点两个角点即可（输入 B/P 切框选、点选）。\n3. 修复「追加图框」框选后图上没有临时红框/序号：补 WCS→DCS 换算、追加后刷新覆盖层、并记录来源图纸（否则被\"只画当前图\"过滤掉）。\n4. 保留图框库录入字段列（图号/图名/日期/版次/阶段/信息1-2/自定义字段）。"
 }
