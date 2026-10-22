@@ -1,7 +1,7 @@
 {
-  "version": "2.3.16.0",
-  "releaseDate": "2026-10-19",
-  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.16/AD-BatchPlot-V2.3.16-AllVersions.zip",
+  "version": "2.3.17.0",
+  "releaseDate": "2026-10-22",
+  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.17/AD-BatchPlot-V2.3.17-AllVersions.zip",
   "minSupportedVersion": "2.0.0.0",
-  "notes": "1. 新增「真彩打印 / 索引色打印」：设置→打印预设→常规→颜色输出。索引色＝套 CTB 按 ACI 索引色；真彩＝不套样式表按对象真实颜色。\n2. 修复安装器装完菜单栏不显示：安装器现在自动写 CAD 自动加载注册表（HKCU\\<产品根>\\Applications\\AcadBatchPlot），重启即加载并显示菜单。\n3. 修复文件命名默认预设为英文：默认命名格式改为中文 {图号}_{图名}。"
+  "notes": "1. 首页按钮「手动添加」改名为「追加图框」（功能不变）。\n2. 修复中望 ZWCAD「录入新图框后卡死」：图框库窗口内不再嵌套 CAD 模态窗/取点，改为关窗交回命令上下文执行，跑完重开窗口。\n3. 图框信息库列表新增录入字段列（图号/图名/日期/版次/阶段/信息1-2/自定义字段）：录入过才建列，单元格显示录入时识别到的文字。"
 }
