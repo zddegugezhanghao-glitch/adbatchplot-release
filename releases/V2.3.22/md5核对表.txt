@@ -1,0 +1,16 @@
+AD-批量打印 V2.3.22  主程序 md5 核对表
+========================================================
+
+AutoCAD 2007-2010 (旧版)\AcadBatchPlot2007.dll   ccb77bf78c92f10802ae95918e9e8c76
+AutoCAD 2013-2019 (x86)\AcadBatchPlot.dll      b0dc9b8ac677a66d6bd9818254f2c5db
+AutoCAD 2013-2024 (x64)\AcadBatchPlot.dll      2acd28dd3c28accf41a351f0fe5e7337
+AutoCAD 2025-2027 (x64)\AcadBatchPlot2025.dll  78dd5c946ccccf536e07d53fde033cc1
+GStarCAD 2023 (x64)\AcadBatchPlotGSTAR2023.dll ed7b60224816cf204884b64e29744281
+GStarCAD 2024 (x64)\AcadBatchPlotGSTAR2024.dll 7f00f754ff612c2177ced64c7006d024
+GStarCAD 2025 (x64)\AcadBatchPlotGSTAR2025.dll a41ecaa40c0258c09ddbcb02a347b0eb
+GStarCAD 2026 (x64)\AcadBatchPlotGSTAR2026.dll e5557ec43552f7926187c4991b256be8
+GStarCAD 2027 (x64)\AcadBatchPlotGSTAR2027.dll 232dcf68648dec479a5e17930becf797
+ZWCAD 2023 (x64)\BatchPlotter2023.dll          67c1e7fee2accb07cecbf119afe7a575
+ZWCAD 2024 (x64)\BatchPlotter2024.dll          524f6cdc8710701410026a26152b6910
+ZWCAD 2025 (x64)\BatchPlotter2025.dll          f9cea55d607418b4859bb50f80df03e5
+ZWCAD 2026 (x64)\BatchPlotter2026.dll          b0c5038d15815f3df6abf8c98320d3f4

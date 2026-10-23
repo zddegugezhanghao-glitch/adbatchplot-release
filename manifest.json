@@ -1,7 +1,7 @@
 {
-  "version": "2.3.21.0",
+  "version": "2.3.22.0",
   "releaseDate": "2026-10-22",
-  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.21/AD-BatchPlot-V2.3.21-AllVersions.zip",
+  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.22/AD-BatchPlot-V2.3.22-AllVersions.zip",
   "minSupportedVersion": "2.0.0.0",
-  "notes": "1. 追加图框「框选」改为与通用识别同一套选择提示；拿不到选择集时自动退回两点圈范围，按钮不会再\"点了没反应\"。\n2. 修复取消勾选「打印」后序号残留：取消即清空并同步重画；覆盖层擦除加了图层兜底，通用识别留下的旧序号也会清掉。\n3. 设置新增「恢复默认设置」（只重置设置项，图框库与图纸不动，点保存才生效）。\n4. 设置新增「运行日志」：默认关闭，可自选目录（留空＝%TEMP%\\ADBatchPlotRun），记录追加图框/识别/临时框刷新等关键动作。"
+  "notes": "1. 图面序号改回「打印序号」，不再显示图号（图号前缀各异、数字常重号，看不清排序）。\n2. 点选清单行不再整图 Regen：序号不再变「已选择」，只改颜色，且只刷新新旧两个当前行。\n3. 修复「均衡」档认不出 A3：小框短边下限 300→280（A3 短边 297）。\n4. 「纸张匹配容差」说明改准确：只管框→图幅的匹配，不决定矩形算不算图框。"
 }
