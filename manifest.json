@@ -1,7 +1,7 @@
 {
-  "version": "2.3.23.0",
+  "version": "2.3.24.0",
   "releaseDate": "2026-10-22",
-  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.23/AD-BatchPlot-V2.3.23-AllVersions.zip",
+  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.24/AD-BatchPlot-V2.3.24-AllVersions.zip",
   "minSupportedVersion": "2.0.0.0",
-  "notes": "1. 新增「图块直接取最大包围盒」开关：图框是图块时按整体外包盒识别，修剪块除外（默认关）。 \n2. 四边留白接通：独立生效、可与统一留白叠加、负数保持原纸居中缩小；中望/浩辰也支持不等边。 \n3. 安装器：同时读 32/64 位注册表（AutoCAD 2007 等能被识别），自动加载按 CAD 位宽写入。 \n4. 其余同 V2.3.22（图面只显示打印序号、点行不卡、A3 可识别）。"
+  "notes": "1. 中望 ZWCAD 2026 改用官方 26.0 API 重编（原包误用 2025 的 25.0 API，NETLOAD 必失败）。\n2. 四边留白改为真正独立：左/右/上/下 各填各的，不再叠加统一留白；正数扩纸、负数缩内容。\n3. 保留：图块直接取最大包围盒开关、安装器 32/64 位注册表与位宽自动加载。"
 }
