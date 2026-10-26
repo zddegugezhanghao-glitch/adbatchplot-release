@@ -1,7 +1,7 @@
 {
-  "version": "2.3.24.0",
+  "version": "2.3.25.0",
   "releaseDate": "2026-10-22",
-  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.24/AD-BatchPlot-V2.3.24-AllVersions.zip",
+  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.25/AD-BatchPlot-V2.3.25-AllVersions.zip",
   "minSupportedVersion": "2.0.0.0",
-  "notes": "1. 中望 ZWCAD 2026 改用官方 26.0 API 重编（原包误用 2025 的 25.0 API，NETLOAD 必失败）。\n2. 四边留白改为真正独立：左/右/上/下 各填各的，不再叠加统一留白；正数扩纸、负数缩内容。\n3. 保留：图块直接取最大包围盒开关、安装器 32/64 位注册表与位宽自动加载。"
+  "notes": "1. 浩辰 2024-2027 全部重新构建（此前构建一直失败、包内是 10-23 的旧 dll）。\n2. 浩辰打印预览 eInvalidInput：窗口/类型设置加反序重试，PlotOrigin 失败只退回居中出图。\n3. 多布局（识别所有空间）先按布局名自然序分组，组内再按空间位置排。\n4. 保留：中望 2026 真 26.0 API、四边留白独立（各边各填各的）。"
 }
