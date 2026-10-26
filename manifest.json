@@ -1,7 +1,7 @@
 {
-  "version": "2.3.22.0",
+  "version": "2.3.23.0",
   "releaseDate": "2026-10-22",
-  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.22/AD-BatchPlot-V2.3.22-AllVersions.zip",
+  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.23/AD-BatchPlot-V2.3.23-AllVersions.zip",
   "minSupportedVersion": "2.0.0.0",
-  "notes": "1. 图面序号改回「打印序号」，不再显示图号（图号前缀各异、数字常重号，看不清排序）。\n2. 点选清单行不再整图 Regen：序号不再变「已选择」，只改颜色，且只刷新新旧两个当前行。\n3. 修复「均衡」档认不出 A3：小框短边下限 300→280（A3 短边 297）。\n4. 「纸张匹配容差」说明改准确：只管框→图幅的匹配，不决定矩形算不算图框。"
+  "notes": "1. 新增「图块直接取最大包围盒」开关：图框是图块时按整体外包盒识别，修剪块除外（默认关）。 \n2. 四边留白接通：独立生效、可与统一留白叠加、负数保持原纸居中缩小；中望/浩辰也支持不等边。 \n3. 安装器：同时读 32/64 位注册表（AutoCAD 2007 等能被识别），自动加载按 CAD 位宽写入。 \n4. 其余同 V2.3.22（图面只显示打印序号、点行不卡、A3 可识别）。"
 }
