@@ -1,7 +1,7 @@
 {
-  "version": "2.3.30.0",
+  "version": "2.3.31.0",
   "releaseDate": "2026-10-22",
-  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.30/AD-BatchPlot-V2.3.30-AllVersions.zip",
+  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.31/AD-BatchPlot-V2.3.31-AllVersions.zip",
   "minSupportedVersion": "2.0.0.0",
   "notes": "1. 浩辰 2024-2027 全部重新构建（此前构建一直失败、包内是 10-23 的旧 dll）。\n2. 浩辰打印预览 eInvalidInput：窗口/类型设置加反序重试，PlotOrigin 失败只退回居中出图。\n3. 多布局（识别所有空间）先按布局名自然序分组，组内再按空间位置排。\n4. 保留：中望 2026 真 26.0 API、四边留白独立（各边各填各的）。"
 }
