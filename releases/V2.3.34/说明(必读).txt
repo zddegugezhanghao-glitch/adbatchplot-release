@@ -1,0 +1,190 @@
+================================================================
+　AD批量打印 · 全版本发布包
+　　AutoCAD 2007 – 2027 ＋ 中望 ZWCAD 2023 – 2026 ＋ 浩辰 GStarCAD 2023 – 2027
+　打包日期：2026-11-03
+================================================================
+
+【零、本次更新（v2.3.34 · 2026-11-03）】
+
+  本次重点：
+   · 中望 ZWCAD 2026 正式入包（真 26.0 API），中望覆盖 2023–2026 四代。
+   · AutoCAD 2007–2010 旧版（WinForms）功能对齐 2013–2024 主线：通用矩形识别 /
+     图框库识别 / 图层识别 / 追加图框 / 四边留白 / 图幅预设，旧版不再只有图框选择打印。
+   · PDF 右侧约 1mm 白边从根源修复：自定义纸整数点取整误差，改为出图后按登记纸张
+     尺寸精确裁切 MediaBox/CropBox（PdfPageTrim），不缩放、不动内容。
+   · 主程序集版本 2.3.34。
+
+  ── 历史更新（2026-10-12）──
+
+  1. 打印机命名全线统一为 AD_，旧命名前缀彻底清除。
+     · 中望绘图仪资源此前"只改了文件名、没改文件内部"（pc5 的 LocationName、
+       pmp 里 65 个纸张名），本次已等长字节替换改正，并修正了生成器
+       scripts\generate-zwcad-plotter.ps1 的旧名硬编码 —— 重新生成可精确复现。
+     · 全树复核：源码 / 资源 / 脚本 / 部署目录 里旧名引用为 0。
+
+  2. 浩辰版修复"被当作物中望版编译"的缺陷。
+     此前浩辰构建复用了 ZWCAD 编译符号，导致 PmpCustomPaper 里
+     #if !ZWCAD 包住的 PIA3(JSON) 处理（RegisterPia3 / RemovePia3 等 23 个方法）
+     被整段剔除 —— 而浩辰的 PMP 恰恰是 PIA3 格式，满版零边距自定义纸因此会失败。
+     现已引入独立符号 GSTAR：浩辰版完整含全部 PIA3 方法（已逐档核验），
+     菜单组名也由 "ZWCAD" 更正为 "GStarCAD"。
+
+  3. 打印机配置目录定位改为「多路兜底」。
+     此前只试两条 AutoCAD 专有来源（COM 的 AcadApplication + 系统变量
+     ROAMABLEROOTPREFIX），换到浩辰/中望或 COM 不可用时全部落空，
+     就报「未能定位 Plotters 目录」并中断预览。
+     现在依次再试：平台专有系统变量 → 宿主进程目录下的 Plotters
+     → %APPDATA% 下任意层级的 Plotters。任一条命中即可用。
+
+  4. 新增进程级异常兜底（CrashGuard）。
+     插件跑在 CAD 进程内，此前任何未捕获异常都会直接带走整个 CAD
+     （表现为"闪退"）且不留日志。现在挂上 AppDomain / WPF Dispatcher /
+     TaskScheduler（旧版为 WinForms ThreadException）三处兜底，
+     日志位置：%TEMP%\ADBatchPlot_error.log
+     —— 若再遇到异常，请把该日志发回，可直接定位。
+
+  5. 打印机安装失败不再阻断插件加载：写日志后继续，出图能力不受影响。
+
+  6. 位宽矩阵按官方资料重新核对（见第一节），补上两处缺口：
+     · 新增 AutoCAD 2008 的 64 位版（官方：2008 起才提供 64 位）；
+     · 新增 AutoCAD 2013–2019 的 32 位版（官方：2019 是最后一个 32 位版本）。
+     并剔除无用体积：发布包不再包含 linux / macOS 的 pdfium 原生库
+     （原每档白多约 27 MB）与 .pdb 调试符号。
+
+  7. 中望 / 浩辰档的程序集版本号由 2.0.0 对齐到 2.2.13，主窗标题可直接辨识版本。
+
+【一、★ 平台与位宽对照（已逐条对官方资料核对）★】
+
+  ── AutoCAD（来源：Autodesk 官方系统要求页 / 官方知识库）──
+
+   CAD 版本      内部版本   32 位   64 位   官方依据
+   -----------  --------  -----  -----  ------------------------------------------
+   2007         R17.0      ✔      ☓      官方「AutoCAD and 64-bit platforms」把 2007
+                                       列为"64 位未经测试、非原生支持"→ 仅 32 位
+   2008         R17.1      ✔      ✔      官方 2008 系统要求页明确列出
+                                       "Additional System Requirements for 64-bit AutoCAD"
+   2009         R17.2      ✔      ✔      官方系统要求页含 32/64 两栏
+   2010–2012    R18.x      ✔      ✔      同上
+   2013–2019    R19–R23    ✔      ✔      官方 KB：AutoCAD 2019 是最后一个 32 位版本
+   2020–2024    R23.1–24  ✗      ✔      官方 KB「AutoCAD 停止提供 32 位版本」：
+                                       2020 起不再提供 32 位
+   2025–2027    R25.x      ✗      ✔      官方 2025 系统要求页：64 位 Windows
+
+  ── 国产 CAD（来源：厂商官方站点 / 官方安装包）──
+
+   中望 ZWCAD   官方下载中心逐版标注：V2023 / V2024 / V2025 / V2026 均为 64-bit；
+                32 位只到 V2022（V2022 及更早才有 64-bit / 32-bit 两个安装包）。
+                ZWCAD 2025 官方安装向导自身版本串也带 _x64。
+                → 本项目覆盖的 2023–2025 全部只做 64 位。
+
+   浩辰 GStarCAD 现代版本为 64 位；本项目按两代 API 适配，均为 x64。
+
+【二、按你的 CAD 选哪一个】
+
+  你的 CAD                文件夹                                  主 DLL
+  ---------------------  --------------------------------------  ---------------------------------
+  AutoCAD 2013–2024      01_AutoCAD 2013-2024 (x64)              AcadBatchPlot.dll
+  AutoCAD 2013–2019 32位 02_AutoCAD 2013-2019 (x86)              AcadBatchPlot.dll
+  AutoCAD 2025–2027      03_AutoCAD 2025-2027 (x64)              AcadBatchPlot2025.dll
+  AutoCAD 2007 / 2008 32 04_AutoCAD 2007-2008 (x86)              AcadBatchPlot2007.dll
+  AutoCAD 2008 64 位     05_AutoCAD 2008 (x64)                   AcadBatchPlot2008x64.dll
+  AutoCAD 2009 32/64     06_AutoCAD 2009 \ 32位 | 64位            AcadBatchPlot2009.dll / …2009x64.dll
+  AutoCAD 2010–2012 32/64 07_AutoCAD 2010-2012 \ 32位 | 64位      AcadBatchPlot2010.dll / …2010x64.dll
+  中望 2023–2026         08_中望 ZWCAD (x64) \ 2023 | 2024 | 2025 | 2026 BatchPlotter2023/2024/2025/2026.dll
+  浩辰 2023（旧代 API）   09_浩辰 GStarCAD (x64) \ 2023 (旧API)    AcadBatchPlotGSTAR2023.dll
+  浩辰 2024 / 2025        09_浩辰 GStarCAD (x64) \ 2024 | 2025      AcadBatchPlotGSTAR2024/2025.dll
+  浩辰 2026 / 2027        09_浩辰 GStarCAD (x64) \ 2026 | 2027      AcadBatchPlotGSTAR2026/2027.dll
+
+    · 各档按「该 CAD 的托管 API 代际」分别编译，引用版本如下（均已逐档核验）：
+        2007        → acmgd / acdbmgd 17.0.54.0    （R17.0，仅 32 位）
+        2008 64 位  → 17.1.0.0                      （R17.1）
+        2009        → 17.2.0.0                      （R17.2）
+        2010–2012   → 18.0.0.0                      （R18）
+        2013–2024   → AutoCAD.NET 20.0.1 参考程序集（net48）
+        2025–2027   → AutoCAD 2026 的 net8 程序集（25.1）
+        中望        → ZwManaged / ZwDatabaseMgd 23.20 / 24.0 / 25.0
+        浩辰 ≥2024  → GcMgd / GcDbMgd / GcCoreMgd（2024/25 为 net48，2026/27 为 net8）
+        浩辰 ≤2023  → gmap / gmdb（旧代 API）
+    · 32 位与 64 位是两套不同的构建（不是 AnyCPU）：64 位宿主无法加载标记为
+      32 位必需的插件，反之亦然 —— 所以必须按下表选对。
+
+【三、怎么装】（NETLOAD）
+
+  1. 关闭 CAD。
+  2. 把所选文件夹里的【全部文件】连同子文件夹 Plotters 一起拷到固定目录，
+     建议 D:\ADONG\dist\（不要放在临时目录）。
+  3. 打开 CAD，命令行输入 NETLOAD，选中该目录下的主 DLL（见第二节）。
+  4. 命令行输入  ad-dy  或  AD-批量打印  打开主窗口（ad-about 打开关于窗）。
+
+【四、怎么用】（全平台一致）
+
+  1. 选输出目录（默认取当前 DWG 所在目录）。
+  2. 选【输出格式】：PDF / PNG / JPG / SVG / DWG。
+       · PDF：批量出图，可选「合并为一个 PDF」「保留单张」「按图幅分组合并」「签名印章」。
+       · PNG / JPG：直接输出图片，分辨率由「设置 → PNG/JPG 分辨率(DPI)」控制（72–600，默认 150）。
+       · SVG：按图框导出矢量 SVG。
+       · DWG：按图框拆出独立 DWG 文件。
+  3. 选「扫描范围」：全部空间 / 图纸布局 / 当前空间 / 模型空间。
+  4. 点【图框识别】——自动找出矩形图框，并匹配图幅与比例。
+  5. 勾选要出图的框（可「全选/全不选」）。
+  6. 点【批量出图】（按钮会变「停止」，可随时中断）；或选中某行点【单张打印】。
+  7. 菜单 文件→多文件批量：一次选多个 DWG，逐个扫描并汇总到同一张清单。
+       （2007–2012 旧版为 WinForms 界面，入口同名，功能对齐）
+
+【五、2007–2012 旧版（WinForms）说明】
+
+  原界面是 WPF，而 .NET 3.5 / CLR 2.0 宿主跑不了 WPF，故旧版界面用 WinForms 重写，
+  出图与导出逻辑与新版共用同一套引擎，外观/辅类功能已一并对齐：
+    · 主题换肤（工具→界面主题：跟随 CAD / 浅色 / 深色）
+    · 快捷键设置（写 PGP 简化命令，需 REINIT 生效）
+    · 标题栏库管理 + 入库向导、清单列自定义、清单行内「预览」列
+    · 单张打印、多文件批量、DWG 拆图、按图幅分组合并、合并书签
+    · PNG / JPG 分辨率（DPI）可设；关于窗可自由拉伸
+    · 与新版唯一差异：PDF 合并只用内置 PdfSharp 通道，无 pdftk 极速通道
+      （结果一致，页数极多时略慢）
+
+【六、中望 ZWCAD 说明】
+
+  · 本插件源码原本就是中望 CAD 插件（工程名 batchPrintZWCAD），中望平台线一直保留。
+  · 覆盖 2023 / 2024 / 2025，三版程序集标识不同，已分别编译，请按年份选对应 DLL。
+  · 官方 2023 起只提供 64 位，故本档只有 64 位。
+  · 依赖的 ZwManaged.dll / ZwDatabaseMgd.dll 由中望宿主提供，不随包分发。
+
+【七、浩辰 GStarCAD 说明】
+
+  · 浩辰与 AutoCAD 的托管 API 结构一一镜像，只是根命名空间不同；已按两代分别适配：
+       ≥2024：命名空间 Gssoft.Gscad.*  程序集 GcMgd / GcDbMgd / GcCoreMgd
+               （2024、2025 为 net48；2026、2027 为 net8）
+       ≤2023：命名空间 GrxCAD.*        程序集 gmap / gmdb（旧代 API）
+  · 绘图仪安装器以 AutoCAD 版为蓝本（浩辰用 pc3 / pmp，与 AutoCAD 同系，
+    不是中望的 pc5 体系），并已恢复 PIA3 处理路径。
+  · ≤2023 旧代缺 TransientManager（框选时的临时红框），已降级为「不画红框」，
+    字段框选与取值结果不受影响。
+
+【八、源码位置】（batchPrintZWCAD-1.15.7.8\src\）
+
+    · AutoCAD 主线      ：src\AcadBatchPlot\AcadBatchPlot.csproj
+                          （net48;net8.0-windows；-p:AcadBits=x86 产出 32 位版）
+    · AutoCAD 2007/2008 ：src\AcadBatchPlot.Legacy\AcadBatchPlot.Legacy.csproj（net35）
+    · AutoCAD 其余旧版  ：src\AcadBatchPlot.Legacy\AcadBatchPlot.Legacy.Multi.csproj
+                          （-p:LegacyTag=2008x64|2009|2009x64|2010|2010x64
+                            -p:LegacyPlatform=x86|x64 -p:LegacyRefDir=<引用目录>）
+    · 中望 ZWCAD        ：src\BatchPlotter\BatchPlotter.csproj（-p:ZwTag=2023|2024|2025）
+    · 浩辰 GStarCAD     ：src\GStarCAD\（平台实现）+ _tools\build_gstar.py
+    · 旧版 WinForms 界面：src\AcadBatchPlot.Legacy\Legacy*.cs
+    · 一键全量重建      ：_tools\build_all.sh
+
+  ⚠ 构建注意：
+    · 增量构建偶有不收敛（成批假错），先删对应工程的 obj 与 bin 目录再编。
+    · AppendTargetFrameworkToOutputPath=false 时，多 TFM / 多位宽必须各有独立
+      IntermediateOutputPath，否则 WPF 生成的 .g.cs 会互相覆盖。
+    · 中望/浩辰的 NuGet SDK 包均为社区重分发，包内是原厂签名 DLL；正式交付建议用
+      CAD 安装目录里自带的程序集复核。
+    · AutoCAD 各代的托管参考程序集（acmgd/acdbmgd）不随包分发：2007–2012 取
+      ObjectARX SDK 的 inc-win32 / inc-x64，2013+ 由 AutoCAD.NET NuGet 提供。
+
+【九、版本与校验】
+
+    · 每个 DLL 的 md5 见同目录 md5清单.txt。
+    · 主线程序集版本 2.2.13；中望 / 浩辰档同版本号，主窗标题可直接辨识。
+================================================================

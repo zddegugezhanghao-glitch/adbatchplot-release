@@ -1,7 +1,7 @@
 {
-  "version": "2.3.33.0",
-  "releaseDate": "2026-10-22",
-  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.33/AD-BatchPlot-V2.3.33-AllVersions.zip",
+  "version": "2.3.34.0",
+  "releaseDate": "2026-11-03",
+  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.34/AD-BatchPlot-V2.3.34-AllVersions.zip",
   "minSupportedVersion": "2.0.0.0",
-  "notes": "1. 浩辰 2024-2027 全部重新构建（此前构建一直失败、包内是 10-23 的旧 dll）。\n2. 浩辰打印预览 eInvalidInput：窗口/类型设置加反序重试，PlotOrigin 失败只退回居中出图。\n3. 多布局（识别所有空间）先按布局名自然序分组，组内再按空间位置排。\n4. 保留：中望 2026 真 26.0 API、四边留白独立（各边各填各的）。"
+  "notes": "1. 中望 ZWCAD 2026 正式加入发布包（真 26.0 API），补齐中望 2023-2026 四代。\n2. AutoCAD 2007-2010 旧版（WinForms）功能对齐 2013-2024 主线：通用矩形识别、图框库识别、图层识别、追加图框、四边留白、图幅预设。\n3. PDF 右侧约 1mm 白边从根源修复：自定义纸整数点取整导致的误差，改为出图后按登记纸张尺寸精确裁切 MediaBox/CropBox（PdfPageTrim），不缩放、不动内容。\n4. 保留：进程级异常兜底、多路 Plotters 目录定位、四边留白各边独立。"
 }
