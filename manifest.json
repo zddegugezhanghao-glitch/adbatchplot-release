@@ -1,7 +1,7 @@
 {
-  "version": "2.3.34.0",
-  "releaseDate": "2026-11-03",
-  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.34/AD-BatchPlot-V2.3.34-AllVersions.zip",
+  "version": "2.3.35.0",
+  "releaseDate": "2026-11-06",
+  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.35/AD-BatchPlot-Installer-V2.3.35.exe",
   "minSupportedVersion": "2.0.0.0",
-  "notes": "1. 中望 ZWCAD 2026 正式加入发布包（真 26.0 API），补齐中望 2023-2026 四代。\n2. AutoCAD 2007-2010 旧版（WinForms）功能对齐 2013-2024 主线：通用矩形识别、图框库识别、图层识别、追加图框、四边留白、图幅预设。\n3. PDF 右侧约 1mm 白边从根源修复：自定义纸整数点取整导致的误差，改为出图后按登记纸张尺寸精确裁切 MediaBox/CropBox（PdfPageTrim），不缩放、不动内容。\n4. 保留：进程级异常兜底、多路 Plotters 目录定位、四边留白各边独立。"
+  "notes": "1. 修复排序核心缺陷：选「按图纸位置」不再被图号顺序覆盖（有图框属性时尤其明显）。\n2. 「保持扫描顺序」真正还原扫描顺序；「按文件名」改用稳定键，不再使用会被序号改写的文件名。\n3. 新增排序方式：按比例、按图框大小（面积）、按文件修改时间、按布局标签顺序。\n4. 新增「次序排序」（多级排序）：主键相同再按次键排，例如先按图幅、再按图号。\n5. 多布局排序统一按 CAD 布局标签顺序；降序不再破坏同键内部次序。\n6. 更新包只提供一键安装器，不再附带松散 DLL / 文档。"
 }
