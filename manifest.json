@@ -1,7 +1,7 @@
 {
   "version": "2.3.35.0",
   "releaseDate": "2026-11-06",
-  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.37/AD-BatchPlot-Installer-v2.3.37.exe",
+  "downloadUrl": "https://github.com/zddegugezhanghao-glitch/adbatchplot-release/releases/download/v2.3.38/AD-BatchPlot-Installer-v2.3.38.exe",
   "minSupportedVersion": "2.0.0.0",
   "notes": "1. 修复排序核心缺陷：选「按图纸位置」不再被图号顺序覆盖（有图框属性时尤其明显）。\n2. 「保持扫描顺序」真正还原扫描顺序；「按文件名」改用稳定键，不再使用会被序号改写的文件名。\n3. 新增排序方式：按比例、按图框大小（面积）、按文件修改时间、按布局标签顺序。\n4. 新增「次序排序」（多级排序）：主键相同再按次键排，例如先按图幅、再按图号。\n5. 多布局排序统一按 CAD 布局标签顺序；降序不再破坏同键内部次序。\n6. 更新包只提供一键安装器，不再附带松散 DLL / 文档。"
 }
